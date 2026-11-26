@@ -5,14 +5,14 @@ verify_release.py
 Quick reproducibility verification (< 5 seconds, no PhysioNet downloads required):
   1. Verifies SHA-256 digests of every file listed in CHECKSUMS.sha256.
   2. Verifies byte-compile integrity of all modules in src/.
-  3. Loads the locked 6-DB checkpoints and reports key parameters & thresholds.
+  3. Loads locked SVM, Logistic Regression, LightGBM, ablation/gated, and
+     PyTorch neural checkpoints and prints all 28 locked linear A3 SVM parameters.
 """
 
 import hashlib
 import json
 import pickle
 import py_compile
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -38,15 +38,24 @@ def verify_compile():
 
 
 def verify_checkpoints():
-    # 1. Locked SVM / LogR A3 checkpoint
+    # 1. Locked A3 Linear SVM & Logistic Regression checkpoint
     with open(ROOT / "checkpoints" / "stage2_source6db_subjectaware251_a3_r3b20_v2.pkl", "rb") as f:
-        ckpt_svm = pickle.load(f)
-    svm = ckpt_svm["models"]["SVM"]["A3_HPhiW_NS_R3_B20"]
+        ckpt_lin = pickle.load(f)
+    svm = ckpt_lin["models"]["SVM"]["A3_HPhiW_NS_R3_B20"]
+    logr = ckpt_lin["models"]["LogR"]["A3_HPhiW_NS_R3_B20"]
+    wN = svm["clfN"].coef_.ravel()
+    bN = float(svm["clfN"].intercept_.ravel()[0])
+    wV = svm["clfV"].coef_.ravel()
+    bV = float(svm["clfV"].intercept_.ravel()[0])
+    n_params = len(wN) + 1 + len(wV) + 1
+    assert n_params == 28, f"Expected 28 linear parameters, got {n_params}"
     print(
-        f"[PASS] Loaded A3 Linear SVM checkpoint: "
-        f"dim(F:N/S)={len(svm['clfN'].coef_.ravel())}, dim(F:V)={len(svm['clfV'].coef_.ravel())}, "
-        f"tau_N={svm['tau_N']:.4f}, sig_N={svm['sig_N']:.4f}, tau_V={svm['tau_V']:.4f}, sig_V={svm['sig_V']:.4f}"
+        f"[PASS] Loaded A3 Linear SVM ({n_params} params) & LogR: "
+        f"SVM tau_N={svm['tau_N']:.4f}, sig_N={svm['sig_N']:.4f}, tau_V={svm['tau_V']:.4f}, sig_V={svm['sig_V']:.4f} | "
+        f"LogR tau_N={logr['tau_N']:.4f}, tau_V={logr['tau_V']:.4f}"
     )
+    print(f"       SVM Branch F:N/S (15 weights + b={bN:+.4f}): {[round(float(x), 4) for x in wN]}")
+    print(f"       SVM Branch F:V   (11 weights + b={bV:+.4f}): {[round(float(x), 4) for x in wV]}")
 
     # 2. Primary locked LightGBM A3 checkpoint
     with open(ROOT / "checkpoints" / "v61_lightgbm_a3_6db.pkl", "rb") as f:
@@ -57,19 +66,31 @@ def verify_checkpoints():
         f"tau_V={ckpt_lgb['tau_V']:.4f}, sig_V={ckpt_lgb['sig_V']:.4f}"
     )
 
-    # 3. Ablation / causality / gated baseline checkpoints
+    # 3. Ablation / causality / Stage-1-gated checkpoints
     with open(ROOT / "checkpoints" / "v62_locked_models_6db.pkl", "rb") as f:
         m62 = pickle.load(f)
     with open(ROOT / "checkpoints" / "v63b_gated_and_minimal_models_6db.pkl", "rb") as f:
         m63b = pickle.load(f)
     print(f"[PASS] Loaded {len(m62)} ablation/causality models and {len(m63b)} Stage-1-gated/minimal models.")
 
-    # 4. Registries summary
+    # 4. PyTorch 2024-2025 neural checkpoints
+    try:
+        import torch
+        pt_files = sorted((ROOT / "checkpoints").glob("v61_dl_*.pt"))
+        for pt in pt_files:
+            obj = torch.load(pt, map_location="cpu", weights_only=False)
+            n_keys = len(obj["state_dict"]) if isinstance(obj, dict) and "state_dict" in obj else len(obj)
+            print(f"[PASS] Loaded neural checkpoint {pt.name} (tensors/entries={n_keys})")
+    except ImportError:
+        print("[WARN] PyTorch not installed; skipped .pt tensor load (SHA-256 already verified).")
+
+    # 5. Cohort registries
+    s6 = json.loads((ROOT / "registry" / "subject_mapping_6db_v1.json").read_text(encoding="utf-8"))
     lt = json.loads((ROOT / "registry" / "target_cohort_ltstdb_v1.json").read_text(encoding="utf-8"))
     mg = json.loads((ROOT / "registry" / "target_cohort_mghdb_v1.json").read_text(encoding="utf-8"))
     print(
-        f"[PASS] Loaded external registries: LTSTDB ({len(lt['included_records'])} records), "
-        f"MGHDB ({len(mg['included_records'])} records)."
+        f"[PASS] Loaded registries: 6-DB ({len(s6.get('records', s6))} entries), "
+        f"LTSTDB ({len(lt['included_records'])} records), MGHDB ({len(mg['included_records'])} records)."
     )
 
 

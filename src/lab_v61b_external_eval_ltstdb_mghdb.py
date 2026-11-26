@@ -468,7 +468,7 @@ def stream_score_cohort(cohort_name, records_meta, raw_dir, base_url, ann_ext, r
                 os.remove(dat_p)
 
         done += len(wave)
-        free_gb = shutil.disk_usage("d:\\").free / 1e9
+        free_gb = shutil.disk_usage(str(_DATA_ROOT if _DATA_ROOT.exists() else _REPO_ROOT)).free / 1e9
         print(
             f"  [{cohort_name}] Wave {wi // wave_size + 1:2d}/{(len(todo) + wave_size - 1) // wave_size:2d} | "
             f"progress={done:3d}/{len(records_meta)} | dl={t_dl:5.1f}s ext+gpu={t_ex_inf:5.1f}s (gpu={t_inf_tot:4.1f}s) | "
@@ -686,7 +686,7 @@ def main():
     final_report = {
         "Audit_Version": "v61_sota_dl_and_gbdt_external_benchmark",
         "Generated_UTC": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "Contract_SHA256": sha256_file(CONTRACT_V61),
+        "Contract_SHA256": (sha256_file(CONTRACT_V61) if os.path.exists(CONTRACT_V61) else "public_release"),
         "GPU_Name": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "CPU",
         "Total_Eval_Sec": round(time.time() - t0, 1),
         "DL_Checkpoints": dl_meta["Models"],

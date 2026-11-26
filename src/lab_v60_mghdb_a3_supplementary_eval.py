@@ -249,7 +249,7 @@ def prepare_all_mghdb_v2_features(inc_records):
             if os.path.exists(dat_p):
                 os.remove(dat_p)
 
-        free_gb = shutil.disk_usage("d:\\").free / 1e9
+        free_gb = shutil.disk_usage(str(_DATA_ROOT if _DATA_ROOT.exists() else _REPO_ROOT)).free / 1e9
         sk = [x[0] for x in res_list if x[1] == "skipped_short"]
         print(
             f"  Wave {wi // wave_size + 1:2d}/{(len(todo) + wave_size - 1) // wave_size:2d} | "

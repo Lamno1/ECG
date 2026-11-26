@@ -213,7 +213,7 @@ def prepare_all_ltstdb_features(inc_records):
             if os.path.exists(dat_p):
                 os.remove(dat_p)
 
-        free_gb = shutil.disk_usage("d:\\").free / 1e9
+        free_gb = shutil.disk_usage(str(_DATA_ROOT if _DATA_ROOT.exists() else _REPO_ROOT)).free / 1e9
         print(
             f"  Wave {wi // wave_size + 1:2d}/{(len(todo) + wave_size - 1) // wave_size:2d} | "
             f"progress={done_cnt:2d}/{len(inc_records)} | dl={t_dl:5.1f}s ext={t_ex:5.1f}s | "

@@ -22,7 +22,7 @@ PART 2: Trains and SHA-256 seals all 4 published 2024-2025 MIT-licensed SOTA Dee
             Stage-2 hard-negative beats/epoch -> full-stream OOF inference on all 2.68M beats)
           - Exact 1D R3_B20 threshold calibration (MeanPatFAPH_All <= 2.0 across 251 units)
           - Full 6-DB locked training (12 epochs x 80k beats) -> saved & SHA-256 sealed in
-            `paper_1_mechanisms/checkpoints/v61_dl_<model_id>_6db.pt`.
+            `checkpoints/v61_dl_<model_id>_6db.pt`.
         Resumable per model if already saved! ZERO target (LTSTDB / MGHDB) waveforms read in Part 2.
 """
 
@@ -658,7 +658,7 @@ def run_part2_train_all_sota_dl(rec_to_sid, only_models=None, force=False):
         "Audit_Version": "v61a_sota_dl_6db_oof_and_checkpoints",
         "Device": str(DEVICE),
         "GPU_Name": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "CPU",
-        "Contract_SHA256": sha256_file(CONTRACT_V61),
+        "Contract_SHA256": (sha256_file(CONTRACT_V61) if os.path.exists(CONTRACT_V61) else "public_release"),
         "Models": {},
     }
     sum_json_p = os.path.join(AUD_DIR, "V61A_DL_SOURCE_OOF_SUMMARY_20261123.json")
