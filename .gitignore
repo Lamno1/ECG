@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+data_public_ecg/
+external_repos/
+audits/
+*.part
+.DS_Store
+Thumbs.db

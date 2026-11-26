@@ -1,0 +1,3089 @@
+{
+  "schema_version": "target_cohort_ltstdb_v1",
+  "contract_version": "Stage2-ClaimContract-v1.0-Addendum-LTSTDB",
+  "created_utc": "2026-11-22T07:14:33Z",
+  "database": "ltstdb/1.0.0",
+  "cohort_description": "70 subjects (76 records) after excluding 10 verified EDB-overlapping subjects. Absence of documented overlap with mitdb/ltdb/sddb/svdb is not absolute proof of zero cross-database identity overlap.",
+  "label_map_version": "AAMI_Map_v1.1",
+  "label_map": {
+    "N_incl_BBB": [
+      "N",
+      "L",
+      "R",
+      "e",
+      "j",
+      "B"
+    ],
+    "V": [
+      "V",
+      "E"
+    ],
+    "F": [
+      "F"
+    ],
+    "S": [
+      "A",
+      "a",
+      "J",
+      "S"
+    ],
+    "note": "'B' (unspecified bundle branch block) mapped to evaluation class N (normal + bundle branch block) per PhysioNet/AAMI EC57, versioned and locked prior to inference."
+  },
+  "channel_selection_rule": "First two channels [0, 1] uniformly across all 76 included records (including 15 EASI 3-channel records).",
+  "screening_summary_pre_prefix": {
+    "total_db_records": 86,
+    "total_db_subjects": 80,
+    "excluded_edb_overlap_records": 10,
+    "excluded_edb_overlap_subjects": 10,
+    "included_primary_records": 76,
+    "included_primary_subjects": 70,
+    "screening_Fpos_subjects_pre_prefix": 30,
+    "screening_ZeroF_subjects_pre_prefix": 40,
+    "screening_total_F_beats_pre_prefix": 583,
+    "screening_note": "Raw .atr counts BEFORE 50-beat prefix and window-boundary exclusions; actual evaluated post-prefix counts are verified at inference time without altering locked rules."
+  },
+  "secondary_subgroups_preregistered": {
+    "contributor_groups": {
+      "Initial_BIH_11": 11,
+      "Other_2ch_BWH_BIDMC_Pisa": 47,
+      "Zymed_3ch_Standard": 3,
+      "Zymed_3ch_EASI": 15
+    },
+    "excluding_initial_bih_subjects": 59,
+    "standard_lead_subjects": 58,
+    "easi_3ch_subjects": 12,
+    "excluding_s2010_subjects": 69
+  },
+  "excluded_records": [
+    {
+      "rec_id": "s20021",
+      "subject_id": "ltstdb_s2002",
+      "raw_subject_code": "s2002",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0113)",
+      "edb_header_ref": "e0113",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "MLIII",
+        "V4"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "MLIII",
+        "V4"
+      ],
+      "duration_hours_hdr": 21.0833,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 88755,
+        "B_only": 0,
+        "V": 138,
+        "F": 1,
+        "S": 69,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20151",
+      "subject_id": "ltstdb_s2015",
+      "raw_subject_code": "s2015",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0103)",
+      "edb_header_ref": "e0103",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 23.6667,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 79492,
+        "B_only": 0,
+        "V": 166,
+        "F": 11,
+        "S": 6,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20161",
+      "subject_id": "ltstdb_s2016",
+      "raw_subject_code": "s2016",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0105)",
+      "edb_header_ref": "e0105",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "MLIII",
+        "V4"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "MLIII",
+        "V4"
+      ],
+      "duration_hours_hdr": 23.7336,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 83671,
+        "B_only": 0,
+        "V": 8,
+        "F": 1,
+        "S": 18,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20171",
+      "subject_id": "ltstdb_s2017",
+      "raw_subject_code": "s2017",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0127)",
+      "edb_header_ref": "e0127",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 26.0,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 126515,
+        "B_only": 0,
+        "V": 9,
+        "F": 0,
+        "S": 2,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20181",
+      "subject_id": "ltstdb_s2018",
+      "raw_subject_code": "s2018",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0162/e0163)",
+      "edb_header_ref": "e0162",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "MLIII",
+        "V4"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "MLIII",
+        "V4"
+      ],
+      "duration_hours_hdr": 24.0,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 106836,
+        "B_only": 0,
+        "V": 125,
+        "F": 1,
+        "S": 16,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20291",
+      "subject_id": "ltstdb_s2029",
+      "raw_subject_code": "s2029",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0104)",
+      "edb_header_ref": "e0104",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "MLIII",
+        "V4"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "MLIII",
+        "V4"
+      ],
+      "duration_hours_hdr": 23.0144,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 75971,
+        "B_only": 0,
+        "V": 410,
+        "F": 0,
+        "S": 206,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20301",
+      "subject_id": "ltstdb_s2030",
+      "raw_subject_code": "s2030",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0123-e0126)",
+      "edb_header_ref": "e0125",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 24.0878,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 106711,
+        "B_only": 0,
+        "V": 24,
+        "F": 0,
+        "S": 44,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20311",
+      "subject_id": "ltstdb_s2031",
+      "raw_subject_code": "s2031",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0129/e0133)",
+      "edb_header_ref": "e0129",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "MLIII",
+        "V3"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "MLIII",
+        "V3"
+      ],
+      "duration_hours_hdr": 23.9911,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 86173,
+        "B_only": 0,
+        "V": 3,
+        "F": 0,
+        "S": 12,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20581",
+      "subject_id": "ltstdb_s2058",
+      "raw_subject_code": "s2058",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0603)",
+      "edb_header_ref": "e0603",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V5",
+        "V2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V5",
+        "V2"
+      ],
+      "duration_hours_hdr": 22.05,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 84902,
+        "B_only": 0,
+        "V": 18,
+        "F": 0,
+        "S": 15,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20591",
+      "subject_id": "ltstdb_s2059",
+      "raw_subject_code": "s2059",
+      "included_in_primary": false,
+      "exclusion_reason": "Verified EDB overlap (e0604)",
+      "edb_header_ref": "e0604",
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V2",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V2",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 22.7653,
+      "contributor_group": "EDB_Overlap_Excluded",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 84105,
+        "B_only": 0,
+        "V": 3,
+        "F": 0,
+        "S": 53,
+        "other_dropped": 0
+      }
+    }
+  ],
+  "included_records": [
+    {
+      "rec_id": "s20011",
+      "subject_id": "ltstdb_s2001",
+      "raw_subject_code": "s2001",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 22.8831,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 100028,
+        "B_only": 0,
+        "V": 2,
+        "F": 0,
+        "S": 23,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20031",
+      "subject_id": "ltstdb_s2003",
+      "raw_subject_code": "s2003",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.8525,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 107069,
+        "B_only": 0,
+        "V": 1,
+        "F": 0,
+        "S": 2430,
+        "other_dropped": 1
+      }
+    },
+    {
+      "rec_id": "s20041",
+      "subject_id": "ltstdb_s2004",
+      "raw_subject_code": "s2004",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.9072,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 102834,
+        "B_only": 0,
+        "V": 6427,
+        "F": 7,
+        "S": 36,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20051",
+      "subject_id": "ltstdb_s2005",
+      "raw_subject_code": "s2005",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 21.3122,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 112853,
+        "B_only": 0,
+        "V": 2,
+        "F": 2,
+        "S": 34,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20061",
+      "subject_id": "ltstdb_s2006",
+      "raw_subject_code": "s2006",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 22.7494,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 117144,
+        "B_only": 0,
+        "V": 776,
+        "F": 0,
+        "S": 5,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20071",
+      "subject_id": "ltstdb_s2007",
+      "raw_subject_code": "s2007",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 21.0875,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 85745,
+        "B_only": 0,
+        "V": 5,
+        "F": 0,
+        "S": 8,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20081",
+      "subject_id": "ltstdb_s2008",
+      "raw_subject_code": "s2008",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 22.8136,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 111663,
+        "B_only": 0,
+        "V": 1292,
+        "F": 22,
+        "S": 2,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20091",
+      "subject_id": "ltstdb_s2009",
+      "raw_subject_code": "s2009",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 22.5078,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 111565,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 5,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20101",
+      "subject_id": "ltstdb_s2010",
+      "raw_subject_code": "s2010",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 20.3694,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": true,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 70504,
+        "B_only": 0,
+        "V": 7081,
+        "F": 384,
+        "S": 48,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20111",
+      "subject_id": "ltstdb_s2011",
+      "raw_subject_code": "s2011",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 22.1878,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 85186,
+        "B_only": 0,
+        "V": 3,
+        "F": 0,
+        "S": 76,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20121",
+      "subject_id": "ltstdb_s2012",
+      "raw_subject_code": "s2012",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 21.3622,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 84927,
+        "B_only": 0,
+        "V": 580,
+        "F": 0,
+        "S": 19,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20131",
+      "subject_id": "ltstdb_s2013",
+      "raw_subject_code": "s2013",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 20.9194,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 105765,
+        "B_only": 0,
+        "V": 495,
+        "F": 6,
+        "S": 34,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20141",
+      "subject_id": "ltstdb_s2014",
+      "raw_subject_code": "s2014",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 21.7953,
+      "contributor_group": "Initial_BIH_11",
+      "is_initial_bih": true,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 116625,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 49,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20191",
+      "subject_id": "ltstdb_s2019",
+      "raw_subject_code": "s2019",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "MLIII",
+        "V4"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "MLIII",
+        "V4"
+      ],
+      "duration_hours_hdr": 24.0,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 97591,
+        "B_only": 0,
+        "V": 7,
+        "F": 0,
+        "S": 34,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20201",
+      "subject_id": "ltstdb_s2020",
+      "raw_subject_code": "s2020",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 20.9797,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 91366,
+        "B_only": 0,
+        "V": 11,
+        "F": 0,
+        "S": 100,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20211",
+      "subject_id": "ltstdb_s2021",
+      "raw_subject_code": "s2021",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 23.1472,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 99840,
+        "B_only": 0,
+        "V": 17,
+        "F": 1,
+        "S": 2,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20221",
+      "subject_id": "ltstdb_s2022",
+      "raw_subject_code": "s2022",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 21.6756,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 117986,
+        "B_only": 0,
+        "V": 27,
+        "F": 0,
+        "S": 1169,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20231",
+      "subject_id": "ltstdb_s2023",
+      "raw_subject_code": "s2023",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 23.4292,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 103061,
+        "B_only": 0,
+        "V": 2,
+        "F": 1,
+        "S": 36,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20241",
+      "subject_id": "ltstdb_s2024",
+      "raw_subject_code": "s2024",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ML2",
+        "MV2"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ML2",
+        "MV2"
+      ],
+      "duration_hours_hdr": 23.3669,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 92429,
+        "B_only": 0,
+        "V": 6,
+        "F": 0,
+        "S": 4,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20251",
+      "subject_id": "ltstdb_s2025",
+      "raw_subject_code": "s2025",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.7667,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 108326,
+        "B_only": 0,
+        "V": 7,
+        "F": 0,
+        "S": 40,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20261",
+      "subject_id": "ltstdb_s2026",
+      "raw_subject_code": "s2026",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 22.4594,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 101491,
+        "B_only": 0,
+        "V": 746,
+        "F": 1,
+        "S": 73,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20271",
+      "subject_id": "ltstdb_s2027",
+      "raw_subject_code": "s2027",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.7333,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 106269,
+        "B_only": 0,
+        "V": 7893,
+        "F": 0,
+        "S": 39,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20272",
+      "subject_id": "ltstdb_s2027",
+      "raw_subject_code": "s2027",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.7667,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 117699,
+        "B_only": 0,
+        "V": 361,
+        "F": 0,
+        "S": 17,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20273",
+      "subject_id": "ltstdb_s2027",
+      "raw_subject_code": "s2027",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.6333,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 103391,
+        "B_only": 0,
+        "V": 606,
+        "F": 0,
+        "S": 23,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20274",
+      "subject_id": "ltstdb_s2027",
+      "raw_subject_code": "s2027",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 22.9356,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 120351,
+        "B_only": 0,
+        "V": 702,
+        "F": 2,
+        "S": 6,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20281",
+      "subject_id": "ltstdb_s2028",
+      "raw_subject_code": "s2028",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.7,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 72989,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 87,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20321",
+      "subject_id": "ltstdb_s2032",
+      "raw_subject_code": "s2032",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 24.5667,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 91679,
+        "B_only": 0,
+        "V": 201,
+        "F": 0,
+        "S": 49,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20331",
+      "subject_id": "ltstdb_s2033",
+      "raw_subject_code": "s2033",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 24.3958,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 78351,
+        "B_only": 0,
+        "V": 6,
+        "F": 3,
+        "S": 5658,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20341",
+      "subject_id": "ltstdb_s2034",
+      "raw_subject_code": "s2034",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 22.4869,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 100092,
+        "B_only": 0,
+        "V": 87,
+        "F": 2,
+        "S": 74,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20351",
+      "subject_id": "ltstdb_s2035",
+      "raw_subject_code": "s2035",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 22.8194,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 118847,
+        "B_only": 0,
+        "V": 796,
+        "F": 0,
+        "S": 9,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20361",
+      "subject_id": "ltstdb_s2036",
+      "raw_subject_code": "s2036",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.7917,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 105658,
+        "B_only": 0,
+        "V": 11,
+        "F": 1,
+        "S": 18,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20371",
+      "subject_id": "ltstdb_s2037",
+      "raw_subject_code": "s2037",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 22.5075,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 95733,
+        "B_only": 0,
+        "V": 5,
+        "F": 0,
+        "S": 12,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20381",
+      "subject_id": "ltstdb_s2038",
+      "raw_subject_code": "s2038",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.8472,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 102904,
+        "B_only": 0,
+        "V": 53,
+        "F": 0,
+        "S": 15,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20391",
+      "subject_id": "ltstdb_s2039",
+      "raw_subject_code": "s2039",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 20.8078,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 102633,
+        "B_only": 0,
+        "V": 201,
+        "F": 7,
+        "S": 8,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20401",
+      "subject_id": "ltstdb_s2040",
+      "raw_subject_code": "s2040",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 21.4642,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 77269,
+        "B_only": 0,
+        "V": 61,
+        "F": 0,
+        "S": 3,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20411",
+      "subject_id": "ltstdb_s2041",
+      "raw_subject_code": "s2041",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.1447,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 84385,
+        "B_only": 0,
+        "V": 23,
+        "F": 0,
+        "S": 299,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20421",
+      "subject_id": "ltstdb_s2042",
+      "raw_subject_code": "s2042",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 21.2308,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 87657,
+        "B_only": 0,
+        "V": 93,
+        "F": 5,
+        "S": 5211,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20431",
+      "subject_id": "ltstdb_s2043",
+      "raw_subject_code": "s2043",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.8583,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 102344,
+        "B_only": 0,
+        "V": 33,
+        "F": 0,
+        "S": 46,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20441",
+      "subject_id": "ltstdb_s2044",
+      "raw_subject_code": "s2044",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.7833,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 89666,
+        "B_only": 0,
+        "V": 3436,
+        "F": 0,
+        "S": 25,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20451",
+      "subject_id": "ltstdb_s2045",
+      "raw_subject_code": "s2045",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 23.7089,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 88006,
+        "B_only": 0,
+        "V": 3,
+        "F": 0,
+        "S": 46,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20461",
+      "subject_id": "ltstdb_s2046",
+      "raw_subject_code": "s2046",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "ECG",
+        "ECG"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "ECG",
+        "ECG"
+      ],
+      "duration_hours_hdr": 22.8328,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 98845,
+        "B_only": 0,
+        "V": 2,
+        "F": 0,
+        "S": 25,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20471",
+      "subject_id": "ltstdb_s2047",
+      "raw_subject_code": "s2047",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 25.4528,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 115231,
+        "B_only": 0,
+        "V": 61,
+        "F": 1,
+        "S": 10,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20481",
+      "subject_id": "ltstdb_s2048",
+      "raw_subject_code": "s2048",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 23.4125,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 91436,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 19,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20491",
+      "subject_id": "ltstdb_s2049",
+      "raw_subject_code": "s2049",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 23.4667,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 96128,
+        "B_only": 0,
+        "V": 775,
+        "F": 0,
+        "S": 48,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20501",
+      "subject_id": "ltstdb_s2050",
+      "raw_subject_code": "s2050",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 23.9639,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 128106,
+        "B_only": 0,
+        "V": 502,
+        "F": 1,
+        "S": 14116,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20511",
+      "subject_id": "ltstdb_s2051",
+      "raw_subject_code": "s2051",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 19.725,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 82678,
+        "B_only": 0,
+        "V": 8,
+        "F": 2,
+        "S": 35,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20521",
+      "subject_id": "ltstdb_s2052",
+      "raw_subject_code": "s2052",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 18.7833,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 75318,
+        "B_only": 0,
+        "V": 13,
+        "F": 0,
+        "S": 5,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20531",
+      "subject_id": "ltstdb_s2053",
+      "raw_subject_code": "s2053",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 19.7833,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 86510,
+        "B_only": 82244,
+        "V": 61,
+        "F": 1,
+        "S": 12,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20541",
+      "subject_id": "ltstdb_s2054",
+      "raw_subject_code": "s2054",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 22.9833,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 114577,
+        "B_only": 0,
+        "V": 563,
+        "F": 5,
+        "S": 5,
+        "other_dropped": 1
+      }
+    },
+    {
+      "rec_id": "s20551",
+      "subject_id": "ltstdb_s2055",
+      "raw_subject_code": "s2055",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "MLIII",
+        "V4"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "MLIII",
+        "V4"
+      ],
+      "duration_hours_hdr": 23.6333,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 100500,
+        "B_only": 6476,
+        "V": 111,
+        "F": 2,
+        "S": 16,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20561",
+      "subject_id": "ltstdb_s2056",
+      "raw_subject_code": "s2056",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 23.6167,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 100744,
+        "B_only": 0,
+        "V": 71,
+        "F": 1,
+        "S": 0,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20571",
+      "subject_id": "ltstdb_s2057",
+      "raw_subject_code": "s2057",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V5",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V5",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 21.1333,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 86442,
+        "B_only": 0,
+        "V": 2288,
+        "F": 5,
+        "S": 233,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20601",
+      "subject_id": "ltstdb_s2060",
+      "raw_subject_code": "s2060",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 23.6667,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 116941,
+        "B_only": 0,
+        "V": 2,
+        "F": 0,
+        "S": 0,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20611",
+      "subject_id": "ltstdb_s2061",
+      "raw_subject_code": "s2061",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 47.8333,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 235882,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 72,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20621",
+      "subject_id": "ltstdb_s2062",
+      "raw_subject_code": "s2062",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 23.4167,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 110990,
+        "B_only": 0,
+        "V": 1375,
+        "F": 0,
+        "S": 3,
+        "other_dropped": 1
+      }
+    },
+    {
+      "rec_id": "s20631",
+      "subject_id": "ltstdb_s2063",
+      "raw_subject_code": "s2063",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 22.3333,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 100030,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 6,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20641",
+      "subject_id": "ltstdb_s2064",
+      "raw_subject_code": "s2064",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 24.4667,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 84062,
+        "B_only": 0,
+        "V": 782,
+        "F": 0,
+        "S": 10,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s20651",
+      "subject_id": "ltstdb_s2065",
+      "raw_subject_code": "s2065",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 2,
+      "signal_names": [
+        "V4",
+        "MLIII"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "MLIII"
+      ],
+      "duration_hours_hdr": 24.5833,
+      "contributor_group": "Other_2ch_BWH_BIDMC_Pisa",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 98127,
+        "B_only": 0,
+        "V": 332,
+        "F": 0,
+        "S": 5405,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30661",
+      "subject_id": "ltstdb_s3066",
+      "raw_subject_code": "s3066",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "V4",
+        "V3",
+        "II"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V4",
+        "V3"
+      ],
+      "duration_hours_hdr": 23.7425,
+      "contributor_group": "Zymed_3ch_Standard",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 122769,
+        "B_only": 0,
+        "V": 60,
+        "F": 3,
+        "S": 21615,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30671",
+      "subject_id": "ltstdb_s3067",
+      "raw_subject_code": "s3067",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "V6",
+        "V5",
+        "aVF"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V6",
+        "V5"
+      ],
+      "duration_hours_hdr": 23.5767,
+      "contributor_group": "Zymed_3ch_Standard",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 98545,
+        "B_only": 0,
+        "V": 350,
+        "F": 2,
+        "S": 143,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30681",
+      "subject_id": "ltstdb_s3068",
+      "raw_subject_code": "s3068",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "V6",
+        "II",
+        "V5"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "V6",
+        "II"
+      ],
+      "duration_hours_hdr": 23.66,
+      "contributor_group": "Zymed_3ch_Standard",
+      "is_initial_bih": false,
+      "is_easi": false,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 126606,
+        "B_only": 0,
+        "V": 15,
+        "F": 0,
+        "S": 30,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30691",
+      "subject_id": "ltstdb_s3069",
+      "raw_subject_code": "s3069",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 23.85,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 101655,
+        "B_only": 0,
+        "V": 1,
+        "F": 0,
+        "S": 27,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30701",
+      "subject_id": "ltstdb_s3070",
+      "raw_subject_code": "s3070",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 22.4,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 107061,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 17,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30711",
+      "subject_id": "ltstdb_s3071",
+      "raw_subject_code": "s3071",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 23.4144,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 134278,
+        "B_only": 0,
+        "V": 19041,
+        "F": 7,
+        "S": 10,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30721",
+      "subject_id": "ltstdb_s3072",
+      "raw_subject_code": "s3072",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 23.5628,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 103894,
+        "B_only": 0,
+        "V": 335,
+        "F": 0,
+        "S": 2407,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30731",
+      "subject_id": "ltstdb_s3073",
+      "raw_subject_code": "s3073",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 23.8458,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 105791,
+        "B_only": 0,
+        "V": 36,
+        "F": 11,
+        "S": 219,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30732",
+      "subject_id": "ltstdb_s3073",
+      "raw_subject_code": "s3073",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 21.4336,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 96334,
+        "B_only": 0,
+        "V": 25,
+        "F": 2,
+        "S": 254,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30741",
+      "subject_id": "ltstdb_s3074",
+      "raw_subject_code": "s3074",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 23.8333,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 123461,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 0,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30742",
+      "subject_id": "ltstdb_s3074",
+      "raw_subject_code": "s3074",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 21.7344,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 113767,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 0,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30751",
+      "subject_id": "ltstdb_s3075",
+      "raw_subject_code": "s3075",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 23.7319,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 102514,
+        "B_only": 0,
+        "V": 3476,
+        "F": 8,
+        "S": 66,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30752",
+      "subject_id": "ltstdb_s3075",
+      "raw_subject_code": "s3075",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 23.8156,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 114473,
+        "B_only": 0,
+        "V": 5991,
+        "F": 22,
+        "S": 81,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30761",
+      "subject_id": "ltstdb_s3076",
+      "raw_subject_code": "s3076",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 22.7414,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 113473,
+        "B_only": 0,
+        "V": 3214,
+        "F": 58,
+        "S": 299,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30771",
+      "subject_id": "ltstdb_s3077",
+      "raw_subject_code": "s3077",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 16.8889,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 74819,
+        "B_only": 0,
+        "V": 6,
+        "F": 0,
+        "S": 3248,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30781",
+      "subject_id": "ltstdb_s3078",
+      "raw_subject_code": "s3078",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 22.3764,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 108331,
+        "B_only": 0,
+        "V": 408,
+        "F": 7,
+        "S": 1341,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30791",
+      "subject_id": "ltstdb_s3079",
+      "raw_subject_code": "s3079",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 23.1664,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 100325,
+        "B_only": 0,
+        "V": 57,
+        "F": 1,
+        "S": 99,
+        "other_dropped": 0
+      }
+    },
+    {
+      "rec_id": "s30801",
+      "subject_id": "ltstdb_s3080",
+      "raw_subject_code": "s3080",
+      "included_in_primary": true,
+      "exclusion_reason": null,
+      "edb_header_ref": null,
+      "fs_hz": 250.0,
+      "n_signals": 3,
+      "signal_names": [
+        "E-S",
+        "A-S",
+        "A-I"
+      ],
+      "locked_channel_indices": [
+        0,
+        1
+      ],
+      "locked_leads": [
+        "E-S",
+        "A-S"
+      ],
+      "duration_hours_hdr": 23.8392,
+      "contributor_group": "Zymed_3ch_EASI",
+      "is_initial_bih": false,
+      "is_easi": true,
+      "is_s2010": false,
+      "screening_counts_raw_atr": {
+        "N_incl_B": 94358,
+        "B_only": 0,
+        "V": 0,
+        "F": 0,
+        "S": 15,
+        "other_dropped": 0
+      }
+    }
+  ]
+}

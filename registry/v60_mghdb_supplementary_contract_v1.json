@@ -1,0 +1,47 @@
+{
+  "contract_version": "Stage2-Wave3-MGHDB-Supplementary-v1.0",
+  "sealed_utc": "2026-11-23T09:41:13Z",
+  "status": "LOCKED_PRE_WAVEFORM_DOWNLOAD",
+  "scientific_question": "When transferring frozen Wave-2 A3 (trained/calibrated strictly on 6 Holter/ambulatory source DBs) to acute short-duration ICU/OR bedside recordings (MGHDB) with zero parameter or threshold retuning, which benefits of A3 transfer across clinical domains, and at which pipeline stage (Stage 1 vs Stage 2) is sensitivity lost?",
+  "frozen_checkpoint_path": "d:\\SVM\\paper_1_mechanisms\\checkpoints\\stage2_source6db_subjectaware251_a3_r3b20_v2.pkl",
+  "frozen_checkpoint_sha256": "596867f150e9e79c917c16f2b2f328b64ce02c9f56c6068302fb89ff0763bb7a",
+  "frozen_pipeline_module": "d:\\SVM\\paper_1_mechanisms\\stage2_frozen_pipeline_v2.py",
+  "target_registry_path": "d:\\SVM\\paper_1_mechanisms\\registry\\target_cohort_mghdb_v1.json",
+  "target_registry_sha256": "d90ec5a702e94d2a9ecb5dbe788ebbb73a312d3cb19742eebfe8cef5f4f236eb",
+  "comparison_hierarchy_locked": {
+    "primary": {
+      "model": "SVM",
+      "pair": "A3_HPhiW_NS_R3_B20 vs B0_C3_R3_B20",
+      "operating_point": "Locked source-calibrated T1 (identical R3_B20 source calibration rule; isolates the 5 Branch-F:N/S primitives)",
+      "unit_of_analysis_primary": "Tier1_Explicit (merging 7 explicit cross-referenced multi-record patients; subject-summed counts & hours)",
+      "unit_of_analysis_sensitivity": "Tier2_Conservative (+11 suspected duplicate clinical groups)"
+    },
+    "key_secondary_end_to_end": {
+      "model": "SVM",
+      "pair": "A3_HPhiW_NS_R3_B20 vs B0_C3_R1",
+      "operating_point": "Locked source-calibrated T1 (end-to-end gain vs Wave-1 reference)"
+    },
+    "supporting_controls": [
+      "Linear LogR (identical pairs at locked T1)",
+      "Matched-FA curves (S_min sweep AND pure m_N sweep under fixed B0_R1 Branch-F:V gate) for threshold-independent ranking",
+      "AP (S_min) and oracle Pat@F2",
+      "Subgroup diagnostics: Active-Anchor (K_end > 0) subjects, S2-F+ (s2_F > 0) subjects, Excluding mgh247+mgh046"
+    ]
+  },
+  "denominator_and_diagnostic_rules_locked": {
+    "primary_recall_denominator": "ALL post-prefix F+ subjects (including F+ subjects with s2_F == 0, whose full-system recall is 0.0%).",
+    "conditional_stage2_recall": "Reported separately across s2_F > 0 subjects and pooled TP / s2_F to isolate Stage-1 admission ceiling vs Stage-2 ranking.",
+    "mandatory_four_numbers_side_by_side": [
+      "Stage-1->Stage-2 admitted F beats / total post-prefix F beats (plus K_end > 0 subject/record count)",
+      "Locked-T1 detected TP",
+      "Locked-T1 FP_NS and FP_V",
+      "Total evaluated post-prefix hours"
+    ],
+    "bootstrap_spec": {
+      "B": 10000,
+      "seed": 42,
+      "rng": "numpy.random.default_rng"
+    },
+    "non_collapse_interpretation_rule": "Both Delta_MacroRec_Fpos and Delta_MeanFAPH_All with 95% paired subject bootstrap CIs are reported side-by-side. FAPH reduction achieved by collapsing F recall toward zero is NOT counted as a representation gain; if recall and FAPH move in opposing directions, the trade-off is reported explicitly without claiming dominance."
+  }
+}
